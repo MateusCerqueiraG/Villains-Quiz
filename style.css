@@ -92,13 +92,22 @@ section#intro {
         display: flex;
         width: 100%;
         height: 550px;
+        background-color: #202020;
+}
+
+p#inTIT {
+    position: relative;
+    font-family: paia;
+    left: 20%;
+    top: 20%;
 }
 
 p#in {
     position: relative;
     font-family: paia;
-    left: 5%;
-    top: 20%;
+    left: -12%;
+    top: 30%;
+    text-align: center;
 }
 
 img#in {
