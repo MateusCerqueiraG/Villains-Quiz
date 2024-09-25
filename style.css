@@ -1,0 +1,109 @@
+@font-face {
+    font-family: eita;
+    src: url(fonte/RACESPACEREGULAR.otf) format('opentype');
+} 
+
+@font-face {
+    font-family: paia;
+    src: url(fonte/Versa-Versa.otf) format('opentype');
+}
+
+* {
+margin: 0;
+padding: 0;
+font-family: eita;
+}
+
+body {
+    background-color: #161616;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#cabecalho {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.hakariii {
+    height: 250px;
+}
+
+header#cab {
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    background: #000000;
+    padding: 15px;
+    width: 55%;
+    border-top-right-radius: 80px 80px;
+    border-bottom-right-radius: 80px 80px;
+    border-top-left-radius: 80px 80px;
+    border-bottom-left-radius: 80px 80px;
+}
+
+img#logo {
+    position: relative;
+    top: 10%;
+}
+
+header#cab1 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background: #000000;
+    padding: 5px;
+    width: 35%;
+    font-family: paia;
+}
+
+header#cab2 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background: #000000;
+    padding: 5px;
+    width: 35%;
+    font-family: paia;
+}
+
+header#cab3 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background: #000000;
+    padding: 5px;
+    width: 35%;
+    font-family: paia;
+    border-bottom-right-radius: 80px 80px;
+    border-bottom-left-radius: 80px 80px;
+    margin-bottom: 150px;
+}
+
+section#intro {
+        display: flex;
+        gap: 10px;
+        font-size: 35px;
+        color: white;
+        justify-content: space-around;
+        display: flex;
+        width: 100%;
+        height: 550px;
+}
+
+p#in {
+    position: relative;
+    font-family: paia;
+    left: 5%;
+    top: 20%;
+}
+
+img#in {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    left: 0%;
+}
