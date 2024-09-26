@@ -337,6 +337,14 @@ section#botaoTOP {
     transform: scale(0.95);  
 }
 
+img#knuckles {
+    position: relative;
+    top: 65px;
+    width: 150px;
+    height: 150px;
+    transform: scaleX(-1);
+}
+
 @media (min-width: 1420px) {
     img#in {
         position: relative;
