@@ -1,7 +1,7 @@
 function mostrarResultado(){
     const resultado = calcularResultado();
     localStorage.setItem('resultado', resultado);
-    window.location.href="resultadoQuiz.html";
+    window.location.href="resultado.Quiz.html";
 }
 
 function calcularResultado() {

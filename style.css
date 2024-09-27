@@ -345,6 +345,27 @@ img#knuckles {
     transform: scaleX(-1);
 }
 
+.resultadosIMG {
+    width: 300px;
+    height: 300px;
+}
+
+p#resultadoBODY {
+    font-family: paia;
+    color: red;
+    font-size: 45px;
+}
+
+p#resultadoBODY2 {
+    font-family: paia;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 900px;
+    margin-bottom: 25px;
+}
+
 @media (min-width: 1420px) {
     img#in {
         position: relative;
