@@ -1,4 +1,10 @@
-function calcularResultado(){
+function mostrarResultado(){
+    const resultado = calcularResultado();
+    localStorage.setItem('resultado', resultado);
+    window.location.href="resultadoQuiz.html";
+}
+
+function calcularResultado() {
     // Pontuações dos personagens
     let coringa = 0;
     let capitaoPatria = 0;
@@ -10,18 +16,18 @@ function calcularResultado(){
     let respostas = document.forms['formulario'].elements;
 
     // Iterar pelas perguntas e somatória dos pontos
-    for(let i = 0; i < respostas.length; i++){
-        if(respostas[i].checked){
+    for (let i = 0; i < respostas.length; i++) {
+        if (respostas[i].checked) {
 
-            if(respostas[i].classList.contains('coringa')){
+            if (respostas[i].classList.contains('coringa')) {
                 coringa++;
             } else if (respostas[i].classList.contains('capitao-patria')) {
                 capitaoPatria++;
-            } else if (respostas[i].classList.contains('voldemort')){
+            } else if (respostas[i].classList.contains('voldemort')) {
                 voldemort++;
-            } else if (respostas[i].classList.contains('eggman')){
+            } else if (respostas[i].classList.contains('eggman')) {
                 eggman++;
-            } else if (respostas[i].classList.contains('darth-vader')){ 
+            } else if (respostas[i].classList.contains('darth-vader')) {
                 darthVader++;
             }
         }
@@ -32,16 +38,16 @@ function calcularResultado(){
     let resultado = '';
 
 
-    if(maiorPontuacao === coringa){
-        resultado = 'Seu vilão é o Coringa!';
-    } else if (maiorPontuacao === capitaoPatria){
-        resultado = 'Seu vilão é o Capitão Pátria!';
-    } else if (maiorPontuacao === voldemort){
-        resultado = 'Seu vilão é o Voldemort!';
-    } else if (maiorPontuacao === eggman){
-        resultado = 'Seu vilão é o Eggman!';
-    } else if (maiorPontuacao === darthVader){
-        resultado = 'Seu vilão é o Darth-Vader!';
+    if (maiorPontuacao === coringa) {
+        resultado = 'coringa';
+    } else if (maiorPontuacao === capitaoPatria) {
+        resultado = 'capitao-patria';
+    } else if (maiorPontuacao === voldemort) {
+        resultado = 'voldemort';
+    } else if (maiorPontuacao === eggman) {
+        resultado = 'eggman';
+    } else if (maiorPontuacao === darthVader) {
+        resultado = 'darth-vader';
     }
 
     // Verificação dos pontos no console
@@ -53,5 +59,9 @@ function calcularResultado(){
     console.log("darth vader " + darthVader);
 
     // Mostrar resultado
-    alert(resultado);
+    //alert(resultado);
+
+    //exibirResultadoNovaAba(resultado);
+
+    return resultado;
 }

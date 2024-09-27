@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png">
+
+    <title>Resultado Quiz</title>
+</head>
+<body>
+    <div id="imagem-resultado">imagem</div>
+    <button class="iniciar2" type="button" onclick="window.location.href='index.html'">reiniciar</button>
+
+    <script>
+        const resultado = localStorage.getItem('resultado');
+        const container = document.getElementById('imagem-resultado');
+
+        let imagemUrl;
+
+        // Verifica o resultado e adiciona a imagem
+        if(resultado === 'coringa'){
+            imagemUrl = 'https://s.aficionados.com.br/imagens/coringa-4-brianbolland.jpg';
+            container.innerHTML = <p>Seu vilão é o Coringa!</p><img src="${imagemUrl}" alt="Coringa">;
+            
+        } else if (resultado === 'capitao-patria'){
+            imagemUrl = 'caminho/para/imagem-capitao-patria.jpg';
+            container.innerHTML = <p>Seu vilão é o Capitão Pátria!</p><img src="${imagemUrl}" alt="Capitão Pátria">;
+        } else if (resultado === 'voldemort') {
+            imagemUrl = 'caminho/para/imagem-voldemort.jpg';
+            container.innerHTML = <p>Seu vilão é o Voldemort!</p><img src="${imagemUrl}" alt="Voldemort">;
+        } else if (resultado === 'eggman') {
+            imagemUrl = 'caminho/para/imagem-eggman.jpg';
+            container.innerHTML = <p>Seu vilão é o Eggman!</p><img src="${imagemUrl}" alt="Eggman">;
+        } else if (resultado === 'darth-vader') {
+            imagemUrl = 'caminho/para/imagem-darth-vader.jpg';
+            container.innerHTML = <p>Seu vilão é o Darth Vader!</p><img src="${imagemUrl}" alt="Darth Vader">;
+        } else {
+            container.innerHTML = '<p>Nenhum resultado disponível.</p>';
+        }
+    </script>
+</body>
+</html>
