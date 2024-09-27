@@ -1,6 +1,7 @@
 function mostrarResultado(){
-    const resultado = calcularResultado();
+    const {resultado, maiorPontuacao} = calcularResultado();
     localStorage.setItem('resultado', resultado);
+    localStorage.setItem('maiorPontuacao', maiorPontuacao);
     window.location.href="resultadoQuiz.html";
 }
 
@@ -63,5 +64,8 @@ function calcularResultado() {
 
     //exibirResultadoNovaAba(resultado);
 
-    return resultado;
+    return {
+        resultado: resultado,
+        maiorPontuacao: maiorPontuacao
+    };
 }
